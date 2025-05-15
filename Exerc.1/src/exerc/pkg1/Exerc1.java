@@ -1,21 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package exerc.pkg1;
 
-/**
- *
- * @author aluno.saolucas
- */
+
 public class Exerc1 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        System.out.println(numeroPerfeito(6));
     }
-    
+    public static boolean numeroPerfeito (int x){
+     int n = 0;
+     if (x <= 0) {
+         return false;
+     }
+     for (int i = 1; i < x; i++){
+         if (x % i == 0) {
+             n += i;
+         }
+    }
+     return n == x;
+}
 }
